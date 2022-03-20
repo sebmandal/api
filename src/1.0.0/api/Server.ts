@@ -10,7 +10,7 @@ export default class Server {
 		this.router = new Router()
 	}
 
-	public async start(port: number) {
+	public start(port: number) {
 		this.app.use(this.router.get())
 		this.app.listen(port)
 	}

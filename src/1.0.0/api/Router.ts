@@ -6,7 +6,9 @@ const endpoints: Endpoint[] = [
 		method: 'get',
 		path: '/api/v1.0.0/test',
 		handler: (req: Request, res: Response) => {
-			res.send('API v1.0.0')
+			res.json({
+				message: 'Hello World!',
+			})
 		},
 	},
 ]
