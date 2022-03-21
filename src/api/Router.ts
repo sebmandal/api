@@ -1,31 +1,17 @@
 import express, { Request, Response } from 'express'
-import { Endpoint } from './types/Endpoint'
-
-const endpoints: Endpoint[] = [
-	{
-		method: 'get',
-		path: '/api/v1.0.0/test',
-		handler: (req: Request, res: Response) => {
-			res.json({
-				message: 'Hello World!',
-			})
-		},
-	},
-]
+import endpoints from './endpoints'
 
 export default class Router {
-	private router: express.Router = express.Router()
-	private endpoints: Endpoint[]
+        private router: express.Router
+        private endpoints: ((router: express.Router) => void)[]
 
-	constructor() {
-		this.endpoints = endpoints
+        constructor() {
+		this.router = express.Router()
+                this.endpoints = endpoints
+        }
 
-		this.endpoints.forEach((endpoint: Endpoint) => {
-			this.router[endpoint.method!](endpoint.path, endpoint.handler)
-		})
-	}
-
-	public get() {
+	public init(): express.Router {
+		this.endpoints.forEach(endpoint => endpoint(this.router))
 		return this.router
 	}
 }

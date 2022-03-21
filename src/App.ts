@@ -1,18 +1,24 @@
 /* Importing modules */
 import Server from './api/Server'
-import config from './config'
+require('dotenv').config()
 
 class App {
-	private server: Server
+        private server: Server
+        private config: any
 
-	constructor() {
-		this.server = new Server()
-	}
+        constructor() {
+                this.server = new Server()
 
-	public async start() {
-		this.server.start(config.port)
-		console.log(`Server running on port ${config.port}`)
-	}
+                this.config = {
+                        port: process.env.PORT || 3000,
+                }
+        }
+
+        public init() {
+                this.server = new Server()
+                this.server.start(3000)
+                console.log(`Server running on port ${this.config.port}`)
+        }
 }
 
-new App().start()
+new App().init()
