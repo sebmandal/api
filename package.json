@@ -2,7 +2,7 @@
 	"name": "sebmandal-api",
 	"version": "1.0.0",
 	"description": "A sample API by Sebastian Mandal",
-	"main": "dist/index.js",
+	"main": "dist/App.js",
 	"scripts": {
 		"start": "rm -rf dist && ts && node .",
 		"compile": "rm -rf dist && ts",
