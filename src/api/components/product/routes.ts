@@ -1,5 +1,5 @@
 // import UserController from './UserController'
-import { Router, Request, Response } from 'express'
+import { Router, Request, Response } from 'express'
 import Product from '../../models/Product'
 
 export default (router: Router) => {
