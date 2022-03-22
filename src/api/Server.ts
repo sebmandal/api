@@ -1,17 +1,17 @@
 import express, { Express } from 'express'
 import Router from './router'
+import middleware from './middleware'
 
 export default class Server {
         public app: Express
-        private router: Router
 
         constructor() {
                 this.app = express()
-                this.router = new Router()
         }
 
         public start(port: number) {
-                this.app.use('/api/v1', this.router.init())
+                this.app.use('/api/v1', new Router().init())
+		this.app.use(middleware)
                 this.app.listen(port)
         }
 }

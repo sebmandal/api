@@ -18,7 +18,7 @@ export default (router: Router) => {
         router.route('/products/:id')
                 .get(async (req: Request, res: Response) => {
                         res.json({
-                                message: 'Hello World',
+                                message: `${req.params.id}`,
                         })
                 })
                 .put(async (req: Request, res: Response) => {
