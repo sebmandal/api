@@ -10,7 +10,13 @@ export default class ProductController {
                 )
         }
 
-        public getAllProducts(): Product[] {
+        public getProducts(): Product[] {
                 return this.data
         }
+
+	public getProductById(id: string): Product | undefined {
+		this.data.forEach((product: Product) => console.log(product))
+		return this.data.find((product: Product) => product.id === id)
+	}
 }
+
