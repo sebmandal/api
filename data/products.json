@@ -1,0 +1,16 @@
+[
+        {
+                "_name": "Black T-Shirt",
+                "_price": "10.00",
+                "_description": "A black t-shirt",
+                "_id": "1",
+                "_image": ""
+        },
+        {
+                "_name": "White T-Shirt",
+                "_price": "10.00",
+                "_description": "A white t-shirt",
+                "_id": "2",
+                "_image": ""
+        }
+]

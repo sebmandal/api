@@ -11,7 +11,7 @@ export default class Server {
 
         public start(port: number) {
                 this.app.use('/api/v1', new Router().init())
-		this.app.use(middleware)
+                this.app.use(middleware)
                 this.app.listen(port)
         }
 }
