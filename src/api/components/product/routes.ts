@@ -1,9 +1,9 @@
 // import UserController from './UserController'
 import { Router, Request, Response } from 'express'
-import User from '../../models/User'
+import Product from '../../models/Product'
 
 export default (router: Router) => {
-        router.route('/users')
+        router.route('/products')
                 .get(async (req: Request, res: Response) => {
                         res.json({
                                 message: 'Hello World',
@@ -15,7 +15,7 @@ export default (router: Router) => {
                         })
                 })
 
-        router.route('/users/:id')
+        router.route('/products/:id')
                 .get(async (req: Request, res: Response) => {
                         res.json({
                                 message: 'Hello World',

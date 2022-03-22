@@ -1,5 +1,5 @@
-import userRoutes from './components/user/routes'
+import productRoutes from './components/product/routes';
 
 export default [
-	userRoutes
-]
+	productRoutes,
+];

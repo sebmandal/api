@@ -11,7 +11,7 @@ export default class Server {
         }
 
         public start(port: number) {
-                this.app.use('/api/v1.0.0', this.router.init())
+                this.app.use('/api/v1', this.router.init())
                 this.app.listen(port)
         }
 }
