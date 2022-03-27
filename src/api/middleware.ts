@@ -6,4 +6,6 @@ export default (req: Request, res: Response, next: NextFunction) => {
                 status: 'error',
                 message: 'Route not found',
         })
+
+	next()
 }

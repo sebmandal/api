@@ -1,16 +1,11 @@
 [
         {
-                "name": "Black T-Shirt",
-                "price": "10.00",
-                "description": "A black t-shirt",
-                "id": "1",
-                "image": ""
-        },
-        {
+                "id": "97bf3gkew",
                 "name": "White T-Shirt",
-                "price": "10.00",
-                "description": "A white t-shirt",
-                "id": "2",
-                "image": ""
+                "price": "12.99",
+                "description": "A plain white t-shirt made with premium fabrics",
+                "image": "_",
+                "category": "Unisex Clothing",
+                "quantity": "148"
         }
 ]

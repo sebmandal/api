@@ -1,3 +1,4 @@
 # Todo
 
-- [ ] mkdir db and add a simple JSON database for the users
+- [ ] Add type checking (all properties are not null) on Product controller methods.
+- [ ] Add authentication
