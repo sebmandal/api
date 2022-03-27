@@ -5,14 +5,14 @@ import ProductController from './controller'
 const productController = new ProductController()
 
 export default (router: Router) => {
-        router.route('/products').get(async (req: Request, res: Response) => {
-                const products: Product[] =
-                        await productController.getProducts()
-                res.json(products)
-        })
+        router.route('/products')
+                .get(async (req: Request, res: Response) => {
+                        const products: Product[] =
+                                await productController.getProducts()
+                        res.json(products)
+                })
 
-        router.route('/products/new').post(
-                async (req: Request, res: Response) => {
+                .post(async (req: Request, res: Response) => {
                         const product: Product | undefined =
                                 await productController.createProduct(req.body)
                         if (product) res.json(product)
@@ -20,8 +20,7 @@ export default (router: Router) => {
                                 res.status(400).json({
                                         message: 'Missing fields, please check your request',
                                 })
-                }
-        )
+                })
 
         router.route('/products/test').get(
                 async (req: Request, res: Response) => {
@@ -57,10 +56,11 @@ export default (router: Router) => {
                 })
 
                 .delete(async (req: Request, res: Response) => {
-                        const product: boolean =
+                        const product: Product | undefined =
                                 await productController.deleteProduct(
                                         String(req.params.id)
                                 )
+
                         if (product) res.json(product)
                         else
                                 res.status(404).json({
