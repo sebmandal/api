@@ -22,13 +22,6 @@ export default (router: Router) => {
                                 })
                 })
 
-        router.route('/products/test').get(
-                async (req: Request, res: Response) => {
-                        await productController.clearProducts()
-                        return res.json({ message: 'Products cleared' })
-                }
-        )
-
         router.route('/products/:id')
                 .get(async (req: Request, res: Response) => {
                         const product: Product | undefined =
