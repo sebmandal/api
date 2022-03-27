@@ -1,20 +1,20 @@
 [
-  {
-    "id": "480k1ioyo",
-    "name": "White T-Shirt",
-    "price": "12.99",
-    "description": "A plain white t-shirt made with premium fabrics",
-    "image": "_",
-    "category": "Unisex Clothing",
-    "quantity": "148"
-  },
-  {
-    "id": "2e8mgfyrt",
-    "name": "Black T-Shirt",
-    "price": "12.99",
-    "description": "A plain black t-shirt made with premium fabrics",
-    "image": "_",
-    "category": "Unisex Clothing",
-    "quantity": "45"
-  }
+        {
+                "id": "480k1ioyo",
+                "name": "White T-Shirt",
+                "price": "12.99",
+                "description": "A plain white t-shirt made with premium fabrics",
+                "image": "_",
+                "category": "Unisex Clothing",
+                "quantity": "148"
+        },
+        {
+                "id": "2e8mgfyrt",
+                "name": "Black T-Shirt",
+                "price": "12.99",
+                "description": "A plain black t-shirt made with premium fabrics",
+                "image": "_",
+                "category": "Unisex Clothing",
+                "quantity": "45"
+        }
 ]

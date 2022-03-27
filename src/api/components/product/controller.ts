@@ -68,35 +68,35 @@ export default class ProductController {
                 id: string,
                 product: Product
         ): Product | undefined {
-		const p = this.data.find((p: Product) => p.id === id)
-		if (!p) return
+                const p = this.data.find((p: Product) => p.id === id)
+                if (!p) return
 
-		if (product.name) p.name = product.name
-		if (product.price) p.price = product.price
-		if (product.description) p.description = product.description
-		if (product.image) p.image = product.image
-		if (product.category) p.category = product.category
-		if (product.quantity) p.quantity = product.quantity
-		
-		this.writeData()
-		return p
+                if (product.name) p.name = product.name
+                if (product.price) p.price = product.price
+                if (product.description) p.description = product.description
+                if (product.image) p.image = product.image
+                if (product.category) p.category = product.category
+                if (product.quantity) p.quantity = product.quantity
+
+                this.writeData()
+                return p
         }
 
-	public deleteProduct(id: string): Product | undefined {
-		const product: Product | undefined = this.data.find(
-			(product: Product) => product.id === id
-		)
+        public deleteProduct(id: string): Product | undefined {
+                const product: Product | undefined = this.data.find(
+                        (product: Product) => product.id === id
+                )
 
-		if (!product) return
+                if (!product) return
 
-		this.data = this.data.filter(
-			(product: Product) => product.id !== id
-		)
+                this.data = this.data.filter(
+                        (product: Product) => product.id !== id
+                )
 
-		this.writeData()
+                this.writeData()
 
-		return product
-	}
+                return product
+        }
 
         // for testing
         public clearProducts(): void {
